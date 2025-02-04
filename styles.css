@@ -6,14 +6,17 @@ button:focus{
   outline:none;
 }
 .box{
-  width:292px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 300px;
   background:#C0C0C0;
   border-width:1px;
   border-color:#FFFFFF #808080 #808080 #FFFFFF;
   border-style:solid;
   position:relative;
   padding:1px;
-  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 div.title{
   height:18px;
@@ -32,13 +35,10 @@ p.title{
   font-size:11px;
 }
 .title button{
-  /*position:absolute;
-  right:3px;
-  top:3px;*/
-  margin:2px 2px 2px 0;
+  margin:2px 2px 4px 0;
   float:right;
   width:14px;
-  height:13.5px;
+  height:14px;
   background:#C0C0C0;
   border-width:1px;
   border-color:#FFFFFF #808080 #808080 #FFFFFF;
@@ -66,8 +66,49 @@ div.body button{
   border-width:1px;
   border-color:#FFFFFF #808080 #808080 #FFFFFF;
   padding:4px 10px;
-  margin:20px auto 3px;
-  display:block;
-  position:relative;
+  margin:20px 10px 3px;
+  display: inline;
+  position: relative;
   bottom:0px;
+}
+
+footer{
+  font-family:"MS Sans Serif";
+  position: fixed;
+  bottom: 0%;
+  background:#C0C0C0;
+  border-width: 1px 0px 1px 0px;
+  border-color:#FFFFFF #808080 #808080 #FFFFFF;
+  border-style:solid;
+  padding: 1px 0px 1px 0px;
+  width: 100%;
+}
+footer p{
+  display: inline;
+  padding: 2px 0px 2px 10px;
+}
+
+footer button{
+  width:auto;
+  height:auto;
+  background:#C0C0C0;
+  border-width:1px;
+  border-color:#FFFFFF #808080 #808080 #FFFFFF;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+  margin: 2px 0px 2px 5px;
+  font-size:12px;
+  font-family:Tahoma;
+  text-align:center;
+  display: inline;
+}
+footer p{
+  font-family:Tahoma;
+  font-size:12px;
+  padding: 10px 10px 10px 10px;
+  margin: 2px 0px 2px 2px;
+  float: right;
+}
+.button_holder{
+  text-align: center;
 }
