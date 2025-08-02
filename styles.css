@@ -1,114 +1,27 @@
-*{
-  padding:0px;
-  margin:0px;
-}
-button:focus{
-  outline:none;
-}
-.box{
-  left: 50%;
-  transform: translate(-50%);
-  width: 300px;
-  background:#C0C0C0;
-  border-width:1px;
-  border-color:#FFFFFF #808080 #808080 #FFFFFF;
-  border-style:solid;
-  position:relative;
-  padding:1px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-div.title{
-  height:18px;
-  width:100%;
-  background:#000080;
-  color:#FFF;
-}
-img.title{
-  float:left;
-}
-p.title{
-  margin:2px 0 0 2px;
-  float:left;
-  font-family:Tahoma;
-  font-weight:bold;
-  font-size:11px;
-}
-.title button{
-  margin:2px 2px 4px 0;
-  float:right;
-  width:14px;
-  height:14px;
-  background:#C0C0C0;
-  border-width:1px;
-  border-color:#FFFFFF #808080 #808080 #FFFFFF;
-  padding:0;
-  font-size:9px;
-  font-weight:bold;
-  font-family:Tahoma;
-  text-align:center;
-}
-div.body{
-  padding:13px 12px 12px;
-  height:100%;
-  width:calc(100% - 26px);
-  display:inline-block;
-}
-div.body p{
-  font-family:"MS Sans Serif";
-  font-size:11px;
-}
-div.body button{
-  font-family:"MS Sans Serif";
-  font-size:11px;
-  outline:1px solid #000000;
-  background:#C0C0C0;
-  border-width:1px;
-  border-color:#FFFFFF #808080 #808080 #FFFFFF;
-  padding:4px 10px;
-  margin:20px 10px 3px;
-  display: inline;
-  position: relative;
-  bottom:0px;
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
 }
 
-footer{
-  font-family:"MS Sans Serif";
-  position: fixed;
-  bottom: 0%;
-  background:#C0C0C0;
-  border-width: 1px 0px 1px 0px;
-  border-color:#FFFFFF #808080 #808080 #FFFFFF;
-  border-style:solid;
-  padding: 1px 0px 1px 0px;
+.background {
+  top: 0;
+  left: 0;
   width: 100%;
-}
-footer p{
-  display: inline;
-  padding: 2px 0px 2px 10px;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  background-color: #111;
 }
 
-footer button{
-  width:auto;
-  height:auto;
-  background:#C0C0C0;
-  border-width:1px;
-  border-color:#FFFFFF #808080 #808080 #FFFFFF;
-  text-align: center;
-  padding: 10px 10px 10px 10px;
-  margin: 2px 0px 2px 5px;
-  font-size:12px;
-  font-family:Tahoma;
-  text-align:center;
-  display: inline;
-}
-footer p{
-  font-family:Tahoma;
-  font-size:12px;
-  padding: 10px 10px 10px 10px;
-  margin: 2px 0px 2px 2px;
-  float: right;
-}
-.button_holder{
-  text-align: center;
+.text-tile {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.01);
+  font-size: 3rem;
+  font-weight: bold;
+  transform: rotate(-30deg);
+  white-space: nowrap;
+  user-select: none;
+  font-family: sans-serif;
 }
