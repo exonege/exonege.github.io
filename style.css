@@ -1,0 +1,170 @@
+@font-face {
+  font-family: aldoapache;
+  src: url(assets/fonts/AldotheApache.ttf);
+}
+
+:root {
+    --primary-background: rgb(255, 255, 255);
+    --primary-text: rgb(0, 0, 0);
+
+    --font-huge: 90px;
+    --font-big: 70px;
+    --font-medium: 50px;
+    --font-small: 30px;
+
+    --zindex-front: 1;
+    --zindex-medium: 0;
+    --zindex-back: -1;
+
+}
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+
+    font-family: aldoapache;
+}
+
+.font-huge {
+    font-size: var(--font-huge);
+}
+
+.font-big {
+    font-size: var(--font-big);
+}
+
+.font-medium {
+    font-size: var(--font-medium);
+}
+
+.font-small {
+    font-size: var(--font-small);
+}
+
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    background-color: var(--primary-background);
+    color: var(--primary-text);
+}
+
+
+.page {
+    width: 100%;
+    height: 100vh;
+    
+    scroll-snap-align: center;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.page-header {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.page-header section {
+    padding: 0px 20px;
+    margin: 0px auto;
+}
+
+.ribbon-holder {
+    width: 100%; 
+    height: 100%; 
+
+    overflow: hidden; 
+    position: absolute;
+
+    z-index: var(--zindex-front);
+}
+
+.corner-ribbon {
+    position: absolute;
+
+    font-size: var(--font-medium);
+
+    width: 100%;
+    height: 500px;
+
+    background: var(--primary-text);
+    color: var(--primary-background);
+
+    text-align: center;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.ribbon-bottom {
+    transform: rotate(-32deg);
+
+    left: 50%;
+    top: 80%;
+}
+
+.ribbon-top {
+    transform: rotate(-212deg);
+
+    right: 50%;
+    bottom: 80%;
+}
+
+.corner-ribbon span {
+    display: inline-block;
+    animation: ribbon-scroll 10s linear infinite;
+}
+
+@keyframes ribbon-scroll {
+    0% {
+        transform: translate(0%,0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+.rainbow-text {
+  background: linear-gradient(
+    90deg,
+    #ff7aa2, /* pink */
+    #ff9f68, /* orange */
+    #ffd93d, /* yellow */
+    #6ee7a8, /* green */
+    #4fd1ff, /* cyan */
+    #6c8cff, /* blue */
+    #b784ff  /* purple */
+  );;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.scroll_indicator {
+    position: fixed;
+    left: 10px;
+    z-index: var(--zindex-back);
+}
+
+.scroll_indicator img {
+    animation: scroll-indicator-idle 3s linear infinite;
+}
+
+@keyframes scroll-indicator-idle {
+    0% {
+        transform: translate(0, -35vh);
+    }
+
+    100% {
+        transform: translate(0, 100vh);
+    }
+}
