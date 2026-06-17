@@ -42,6 +42,25 @@
     font-size: var(--font-small);
 }
 
+.text-flavor {
+    padding: 20px 5px;
+}
+
+.text-left {
+    text-align: left;
+} 
+
+.text-right {
+    text-align: right;
+} 
+
+.line {
+    border-left: 5px black solid;
+}
+
+p {
+    line-height: 0.9em;
+}
 
 html {
     scroll-snap-type: y mandatory;
@@ -123,15 +142,15 @@ button img {
 
 @keyframes float-up {
     0% {
-        transform: translate(0, 0.1em);
+        transform: translate3d(0, -0.1em, 0);
     }
 
     50% {
-        transform: translate(0, -0.1em);
+        transform: translate3d(0, -0.2em, 0);
     }
 
     100% {
-        transform: translate(0, 0.1em);
+        transform: translate3d(0, -0.1em, 0);
     }
 }
 
@@ -155,8 +174,8 @@ button img {
 }
 
 .line-ribbon {
-    background: #ffffff;
-    background: repeating-linear-gradient(90deg, #ffffff 0px 20px, #000 20px 80px);
+    background: #ffffff00;
+    background: repeating-linear-gradient(90deg, #ffffff00 0px 20px, #000 20px 80px);
     width: 120%;
     height: 20px;
 
@@ -175,12 +194,24 @@ button img {
     }
 }
 
+.absolute {
+    position: absolute;
+}
+
 .bottom {
-    bottom: 0%;
+    bottom: 0;
 }
 
 .top {
-    top: 0%;
+    top: 0;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
 }
 
 .corner-ribbon {
@@ -200,6 +231,7 @@ button img {
 
     border: 5px solid white;
     outline: 5px solid black;
+
 }
 
 .ribbon-bottom {
@@ -216,18 +248,24 @@ button img {
     bottom: 80%;
 }
 
-.corner-ribbon span {
+.corner-ribbon {
+    overflow: hidden;
+}
+
+.corner-ribbon div {
     display: inline-block;
-    animation: ribbon-scroll 10s linear infinite;
+    animation: ribbon-scroll 15s linear infinite;
+    will-change: transform;
+    animation-delay: 0s;
 }
 
 @keyframes ribbon-scroll {
     from {
-        transform: translate(0%,0);
+        transform: translate3d(0,0,0);
     }
 
     to {
-        transform: translate(-100%, 0);
+        transform: translate3d(-50%,0,0);
     }
 }
 
@@ -247,10 +285,10 @@ button img {
 
 @keyframes scroll-indicator-idle {
     from {
-        transform: translate(0, -100vh);
+        transform: translate3d(0, calc(0vh - 100%), 0);
     }
 
     to {
-        transform: translate(0, 100vh);
+        transform: translate3d(0, 100vh, 0);
     }
 }
