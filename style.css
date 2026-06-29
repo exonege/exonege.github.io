@@ -74,7 +74,7 @@ body {
 
 .page {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     
     scroll-snap-align: center;
     overflow: hidden;
@@ -285,10 +285,10 @@ button img {
 
 @keyframes scroll-indicator-idle {
     from {
-        transform: translate3d(0, calc(0vh - 100%), 0);
+        transform: translate3d(0, calc(0dvh - 100%), 0);
     }
 
     to {
-        transform: translate3d(0, 100vh, 0);
+        transform: translate3d(0, 100dvh, 0);
     }
 }
