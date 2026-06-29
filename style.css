@@ -71,6 +71,9 @@ body {
     color: var(--primary-text);
 }
 
+.invert {
+    filter: invert();
+}
 
 .page {
     width: 100%;
@@ -81,6 +84,12 @@ body {
 
     display: flex;
     flex-direction: column;
+}
+
+.page-about {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .page-header {
@@ -136,22 +145,7 @@ button img {
 }
 
 .float {
-    animation: float-up 5s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
     transform-origin: center;
-}
-
-@keyframes float-up {
-    0% {
-        transform: translate3d(0, -0.1em, 0);
-    }
-
-    50% {
-        transform: translate3d(0, -0.2em, 0);
-    }
-
-    100% {
-        transform: translate3d(0, -0.1em, 0);
-    }
 }
 
 .row {
@@ -182,6 +176,10 @@ button img {
     position: absolute;
     animation: line-ribbon-scroll 5s linear infinite;
 
+}
+
+.line-ribbon-scroll-delay {
+    animation-delay: -2.5s;
 }
 
 @keyframes line-ribbon-scroll {
@@ -270,8 +268,6 @@ button img {
 }
 
 
-
-
 .scroll-indicator {
     position: fixed;
     left: 10px;
@@ -290,5 +286,17 @@ button img {
 
     to {
         transform: translate3d(0, 100vh, 0);
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    .scroll-indicator {
+        display: none;
+    }
+
+    .corner-ribbon {
+        width: 130%; 
+        font-size: var(--font-small);
     }
 }
