@@ -11,6 +11,7 @@
     --font-big: 70px;
     --font-medium: 50px;
     --font-small: 30px;
+    --font-smaller: 20px;
 
     --zindex-front: 1;
     --zindex-medium: 0;
@@ -42,8 +43,18 @@
     font-size: var(--font-small);
 }
 
+.font-smaller {
+    font-size: var(--font-smaller);
+}
+
 .text-flavor {
     padding: 20px 5px;
+}
+
+.left {
+    position: absolute;
+    margin-left: 20px;
+    left: 100%;
 }
 
 .text-left {
@@ -107,8 +118,9 @@ body {
     margin: 0px auto;
 }
 
-button {
+.button-square {
     background-color: var(--primary-text);
+
     border: 5px solid black;
 
     width: 5em;
@@ -123,18 +135,18 @@ button {
     outline-offset: -5px;
 }
 
-button:hover {
+.button-square:hover {
     transform: rotate(-10deg) scale(1.2);
     outline-offset: 5px;
     background-color: var(--primary-background);
 }
 
-button:hover img {
+.button-square:hover img {
     filter: invert(100%);
 }
 
 
-button img {
+.button-square img {
     filter: invert(0%);
 
     justify-self: center;
@@ -142,6 +154,48 @@ button img {
     
     width: 70%;
     height: 70%;
+}
+
+.button-rect {
+    background-color: var(--primary-background);
+    color: var(--primary-text);
+
+    border: 5px solid rgb(0, 0, 0);
+
+    padding: 0em 1em;
+    height: 5em;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    outline: var(--primary-text) solid 5px;
+    outline-offset: -5px;
+}
+
+.button-rect.active {
+    filter: invert();
+
+    outline-offset: 5px;
+
+    outline: var(--primary-background) dashed 5px;
+    padding: 0em 2em;
+}
+
+.button-rect span{
+    vertical-align: middle;
+    font-size: var(--font-small);
+}
+
+.button-rect:hover {
+    filter: invert();
+
+    padding: 0em 2em;
+    outline-offset: 5px;
+    outline-color: var(--primary-background);
 }
 
 .float {
@@ -190,6 +244,11 @@ button img {
     to {
         background-position-x: -160px;
     }
+}
+
+.border {
+    border-left: 5px dashed var(--primary-text);
+    padding: 30px;
 }
 
 .absolute {
