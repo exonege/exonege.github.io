@@ -112,12 +112,6 @@ body {
     color: var(--primary-background);
 }
 
-
-.page-header section {
-    padding: 20px 20px;
-    margin: 0px auto;
-}
-
 .button-square {
     background-color: var(--primary-text);
 
@@ -198,13 +192,22 @@ body {
     outline-color: var(--primary-background);
 }
 
-.float {
-    transform-origin: center;
+.center-pad {
+    padding: 20px 20px;
+    margin: 0px 20px;
+}
+
+.mobile-hide {
+    display: block;
 }
 
 .row {
     display: flex;
     flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+    align-self: center;
     
     gap: 40px;
 }
@@ -355,7 +358,10 @@ body {
     }
 
     .corner-ribbon {
-        width: 130%; 
-        font-size: var(--font-small);
+        display: none;
+    }
+
+    .mobile-hide {
+        display: none;
     }
 }
