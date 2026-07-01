@@ -21,10 +21,30 @@
 
 
 * {
-    padding: 0px;
-    margin: 0px;
 
     font-family: aldoapache;
+}
+
+
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+
+
+p {
+    padding: 0;
+    margin: 0;
 }
 
 .font-huge {
@@ -80,6 +100,7 @@ html {
 body {
     background-color: var(--primary-background);
     color: var(--primary-text);
+    margin: 0;
 }
 
 .invert {
