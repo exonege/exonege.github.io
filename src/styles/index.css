@@ -1,6 +1,6 @@
 @font-face {
   font-family: aldoapache;
-  src: url(assets/fonts/AldotheApache.ttf);
+  src: url(/assets/fonts/AldotheApache.ttf);
 }
 
 :root {
@@ -24,23 +24,6 @@
 
     font-family: aldoapache;
 }
-
-
-.embla__viewport {
-  overflow: hidden;
-}
-
-.embla__container {
-  display: flex;
-  touch-action: pan-y pinch-zoom;
-}
-
-.embla__slide {
-  flex: 0 0 100%;
-  min-width: 0;
-}
-
-
 
 p {
     padding: 0;
